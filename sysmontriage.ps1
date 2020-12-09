@@ -46,7 +46,7 @@ ForEach ($event in $events)
 
     }
 
-   Get-Content -Path C:\SysmonTriage\dnsQueries.csv |    Group-Object -NoElement | Sort-Object –Descending -Property Count  |   Out-GridView -Title DnsQueryNames
+   Get-Content -Path C:\SysmonTriage\dnsQueries.csv |    Group-Object -NoElement | Sort-Object  -Property Count  |   Out-GridView -Title DnsQueryNames
    
 Write-Host "[+] Retrieving Sysmon Destination IP Queries"
 Write-Host
@@ -135,7 +135,7 @@ ForEach ($event in $events)
 
   }
 
-   Get-Content -Path C:\SysmonTriage\DestinationPort.csv |    Group-Object -NoElement | Sort-Object –Descending -Property Count  |   Out-GridView -Title DestinationPort
+   Get-Content -Path C:\SysmonTriage\DestinationPort.csv |    Group-Object -NoElement | Sort-Object  -Property Count  |   Out-GridView -Title DestinationPort
 
   sleep 2
   Write-Host "Check csv files for detailed logs..." -ForegroundColor red -BackgroundColor white
